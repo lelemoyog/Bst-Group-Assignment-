@@ -90,12 +90,12 @@ public class DictionaryGUI extends JFrame {
                 if (!word.isEmpty()) {
                     String result = bst.search(word);
                     if (result != null) {
-                        JOptionPane.showMessageDialog(DictionaryGUI.this, "Meaning of '" + word + "': " + result);
+                        displayArea.setText("Meaning of '" + word + "': " + result);
                     } else {
-                        JOptionPane.showMessageDialog(DictionaryGUI.this, "'" + word + "' not found.");
+                        displayArea.setText("'" + word + "' not found.");
                     }
                 } else {
-                    JOptionPane.showMessageDialog(DictionaryGUI.this, "Please enter a word.");
+                    displayArea.setText("Please enter a word.");
                 }
             }
         });

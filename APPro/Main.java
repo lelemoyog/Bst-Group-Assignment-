@@ -1,6 +1,8 @@
-public class Main {
+import javax.swing.*;
 
+public class Main extends JFrame {
     public static void main(String[] args) {
+        JTextArea displayArea=new JTextArea();
         // Create an instance of the BinarySearchTree
         BinarySearchTree bst = new BinarySearchTree();
         Word[] dictionary = {
@@ -85,6 +87,7 @@ public class Main {
         };
         for (Word word : dictionary) {
             bst.insert(word.getWord(), word.getMeaning());
+            displayArea.setText(word.getWord() + " " + word.getMeaning());
         }
 
 
